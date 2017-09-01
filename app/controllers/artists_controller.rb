@@ -1,11 +1,11 @@
 class ArtistsController < ApplicationController
 
-    before_action :set_billboard
+    
     before_action :set_artist, only: [:show, :edit, :update, :destroy]
     
     
     def index
-      @artists = @billboard.artists
+      @artists = Artist.all
     end
   
     def show
@@ -46,12 +46,10 @@ class ArtistsController < ApplicationController
   
   private
   
-    def set_billboard
-      @billboard = Billboard.find(params[:billboard_id])
-    end
+   
   
     def set_artist
-      @artist = Artist.find(params[:id])
+      @billboard = Artist.find(params[:id])
     end
   
     def artist_params

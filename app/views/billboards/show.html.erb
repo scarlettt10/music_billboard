@@ -1,4 +1,10 @@
 <h1><%= @billboard.name %></h1>
 <hr />
 <p>This is the greatest text in the world</p>
-<%= link_to 'View songs', billboard_artist_songs_path(@song) %>
+
+<div class="ui buttons" >
+  
+<button class="ui compact icon button"><i class="unmute icon"></i><%= link_to 'View Artist', artists_path(@song) %></button>
+
+<button class="ui compact icon button"><i class="sound icon"></i><%= link_to 'Back to Billboard', billboards_path %></button>
+</div>

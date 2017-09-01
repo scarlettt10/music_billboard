@@ -1,8 +1,15 @@
-<h1>working</h1>
+<div class="ui sizer vertical segment">
+  <div class="ui huge header">Billboard Top Hits</div>
+</div>
 <ul>
   <% @billboards.each do |billboard| %>
-    <li>
+  <li>
+   <button class="ui compact icon button">
       <%= link_to billboard.name, billboard %>
-    </li>
+      <i class="music icon"></i>
+  </button> 
+  </li>
+  
+ 
   <%end%>
 </ul>
